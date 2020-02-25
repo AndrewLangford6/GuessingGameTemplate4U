@@ -30,7 +30,9 @@ namespace GuessingGameTemplate4U
             int guess = Convert.ToInt16(inputBox.Text);
 
             //TODO add guess to List of guesses on Form1
+            Form1.egg.Add(guess);
 
+            Form1.numGuess++;
 
             if (guess < rand)
             {
@@ -47,6 +49,11 @@ namespace GuessingGameTemplate4U
                 Thread.Sleep(1000);
 
                 //TODO close this screen and open a Results Screen (you need to create this)
+                Form f = this.FindForm();
+                f.Controls.Remove(this);
+
+                ResultsScreen rs = new ResultsScreen();
+                this.Controls.Add(rs);
 
             }
 
