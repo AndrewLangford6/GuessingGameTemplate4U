@@ -22,6 +22,8 @@ namespace GuessingGameTemplate4U
 
         public static int numGuess;
 
+        //public static bool bean = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +32,8 @@ namespace GuessingGameTemplate4U
         private void Form1_Load(object sender, EventArgs e)
         {
             //launch the Main Screen
+            ResultsScreen rs = new ResultsScreen();
+
             MainScreen ms = new MainScreen();
             this.Controls.Add(ms);
         }
